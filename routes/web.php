@@ -7,6 +7,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\PurchaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,7 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
 
    // Permission route
    Route::resource('permission', PermissionController::class);
+   Route::resource('purchase', PurchaseController::class);
    // Route::get('permission/{id}/delete', [PermissionController::class, 'destroy'])->name('permission.delete');
 
    // Role route

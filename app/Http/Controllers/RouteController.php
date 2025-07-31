@@ -2,24 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Purchase;
+use App\Models\Route;
 use Illuminate\Http\Request;
 
-class PurchaseController extends Controller
+class RouteController extends Controller
 {
-    public $branch_id;
-    public $company_id;
-    public function __construct()
-    {
-        $this->branch_id = auth()->user()->branch_id;
-        $this->company_id = auth()->user()->company_id;
-    }
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('back')
+        //
     }
 
     /**
@@ -41,7 +34,7 @@ class PurchaseController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Purchase $purchase)
+    public function show(Route $route)
     {
         //
     }
@@ -49,7 +42,7 @@ class PurchaseController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Purchase $purchase)
+    public function edit(Route $route)
     {
         //
     }
@@ -57,7 +50,7 @@ class PurchaseController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Purchase $purchase)
+    public function update(Request $request, Route $route)
     {
         //
     }
@@ -65,7 +58,7 @@ class PurchaseController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Purchase $purchase)
+    public function destroy(Route $route)
     {
         //
     }

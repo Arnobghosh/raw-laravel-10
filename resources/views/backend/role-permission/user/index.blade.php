@@ -71,7 +71,7 @@
                                                     {{-- <a href="{{ url('user/' . $user->id . '/delete') }}"
                                                         class="btn btn-danger">Delete</a> --}}
 
-                                                         {{-- @endcan --}}
+                                                    {{-- @endcan --}}
                                                     {{-- @can('delete role') --}}
                                                     <a type="button" onclick="confirmDelete(event, {{ $user->id }})"
                                                         href="javascript:void(0)" class="btn btn-danger btn-sm tableEdit">

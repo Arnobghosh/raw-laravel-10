@@ -3,7 +3,7 @@
       <a href="index3.html" class="brand-link">
           <img src=" {{ asset('backend') }}/dist/img/AdminLTELogo.png" alt="AdminLTE Logo"
               class="brand-image img-circle elevation-3" style="opacity: .8">
-          <span class="brand-text font-weight-light">{{Auth::user()->name}}</span>
+          <span class="brand-text font-weight-light">{{ Auth::user()->name }}</span>
       </a>
 
       <!-- Sidebar -->
@@ -129,7 +129,7 @@
                   </li> --}}
 
                   {{-- Role & Permission  --}}
-                    <li class="nav-item">
+                  <li class="nav-item">
                       <a href="#" class="nav-link">
                           <i class="nav-icon far fa-envelope"></i>
                           <p>
@@ -160,14 +160,22 @@
                   </li>
 
                   <li class="nav-item">
-                      <a href="pages/gallery.html" class="nav-link">
+                      <a href="{{ route('area.index') }}" class="nav-link">
+                          <i class="nav-icon fas fa-shopping-cart"></i>
+                          <p>
+                              Area
+                          </p>
+                      </a>
+                  </li>
+                  <li class="nav-item">
+                      <a href="{{ route('purchase.index') }}" class="nav-link">
                           <i class="nav-icon fas fa-shopping-cart"></i>
                           <p>
                               Purchase
                           </p>
                       </a>
                   </li>
-                
+
 
               </ul>
           </nav>

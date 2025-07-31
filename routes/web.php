@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AreaController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
@@ -27,12 +28,17 @@ Auth::routes();
 
 Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
 
+// ->prefix('dashboard')
+
 // Auth Route Middleware group 
-Route::middleware(['auth'])->prefix('dashboard')->group(function () {
+Route::middleware(['auth'])->group(function () {
 
    // Permission route
-   Route::resource('permission', PermissionController::class);
+   Route::resource('branch', PurchaseController::class);
    Route::resource('purchase', PurchaseController::class);
+   Route::resource('area', AreaController::class);
+
+   Route::resource('permission', PermissionController::class);
    // Route::get('permission/{id}/delete', [PermissionController::class, 'destroy'])->name('permission.delete');
 
    // Role route
@@ -45,5 +51,4 @@ Route::middleware(['auth'])->prefix('dashboard')->group(function () {
 
    Route::resource('user', UserController::class);
    Route::get('/user/{id}/delete', [UserController::class, 'destroy']);
-   
 });
